@@ -34,20 +34,8 @@
                 <div class="nav-bar">
                     <img src="https://nexgen.codings.dev/wp-content/uploads/2021/03/logo.svg" alt="">
                     <ul class="link">
-                        <li>
-                            <a href="#">home</a>
-                        </li>
-                        <li>
-                            <a href="#">about</a>
-                        </li>
-                        <li>
-                            <a href="#">projects</a>
-                        </li>
-                        <li>
-                            <a href="#">process</a>
-                        </li>
-                        <li>
-                            <a href="#">testimonials</a>
+                        <li v-for="(link, index) in navLinks" :key="`link-${index}`">
+                            <a :class="{ active: link.current }" :href="link.url">{{ link.text }}</a>
                         </li>
                         <li>
                             <a href="#">
@@ -80,7 +68,38 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header0',
+    data(){
+        return{
+            navLinks:[
+                {
+                    text: 'home',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'about',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'projects',
+                    url: '/',
+                    current: false
+                },
+                {
+                    text: 'process',
+                    url: '/',
+                    current: true
+                },
+                {
+                    text: 'testimonials',
+                    url: '/',
+                    current: false
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -150,6 +169,7 @@ export default {
                             color: white;
                             font-size: 14px;
                             font-weight: 600;
+                            &.active,
                             &:hover{
                                 color: #1a948f;
                             }
