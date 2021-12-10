@@ -177,6 +177,7 @@ export default {
                         button{
                             text-transform: uppercase;
                             background: #1a948f;
+                            color: white;
                             border: none;
                             border-radius: 3px;
                             width: 130px;
