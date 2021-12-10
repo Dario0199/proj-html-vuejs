@@ -7,17 +7,26 @@
                 <h4>{{ card.title }}</h4>
                 <span>{{ card.text }}</span>
             </div>
-            <!-- <div class="card">
-                <i class="fas fa-chart-pie"></i>
-                <h4>Core Business</h4>
-                <span>It takes innovative approaches to transform, modernize, and run existing platforms.</span>
-            </div>
-            <div class="card">
-                <i class="fab fa-cloudscale"></i>
-                <h4>Performance</h4>
-                <span>Achieving maximum impact and value from investments in finance and supply chain.</span>
-            </div> -->
         </div>
+    </div>
+    <div class="company d-flex">
+        <div class="company-txt ">
+            <h5>about the network</h5>
+            <h1 class="d-flex"> 
+                <div class="h1-bg d-flex">The</div> 
+                Company
+            </h1>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</span>
+            <div class="d-flex mt-5">
+                <div v-for="(card, index) in cardsCompany" :key="`company-${index}`" class="card-company">
+                    <h2>{{ card.number }}</h2>
+                    <h4>{{ card.title }}</h4>
+                    <span>{{ card.text }}</span>
+                </div>
+            </div>
+        </div>
+        
+        <img src="../assets/about-5.jpg" alt="">
     </div>
   </main>
 </template>
@@ -43,6 +52,23 @@ export default {
                 title: 'Performance',
                 text: 'Achieving maximum impact and value from investments in finance and supply chain.'
             }
+        ],
+        cardsCompany: [
+            {
+                number: 0,
+                title: 'Employees',
+                text: 'Lorem ipsum dolor sit amet'
+            },
+            {
+                number: 0,
+                title: 'Partners',
+                text: 'Lorem ipsum dolor sit amet'
+            },
+            {
+                number: 0,
+                title: 'Customers',
+                text: 'Lorem ipsum dolor sit amet'
+            },
         ]
         }
         
@@ -78,6 +104,59 @@ export default {
             align-items: center;
             border-radius: 50%;
         }
+    }
+}
+.company{
+
+    .company-txt{
+        width: 50%;
+        padding-left: 110px;
+        padding-right: 80px;
+        padding-top: 80px;
+
+        h5{
+            color: #1a948f;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        h1{
+            color: black;
+            font-weight: 800;
+            font-size: 50px;
+            margin-bottom: 30px;
+
+            .h1-bg{
+                color: #038483;
+                background: #03848441;
+                width: 110px;
+                margin-right: 10px;
+            }
+        }
+        span{
+            font-size: 16px;
+            color: #85878b;
+            margin-bottom: 30px;
+        }
+        .card-company{
+            width: calc(100% / 3);
+
+            h2{
+                color: #038483;
+                margin-left: 15px;
+                font-weight: 600;
+            }
+            h4{
+                font-weight: 600;
+            }
+        }
+
+    }
+    img{
+        width: 50%;
+        height: 500px;
+        object-fit: cover;
     }
 }
 
