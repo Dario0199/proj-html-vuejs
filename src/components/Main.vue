@@ -71,6 +71,7 @@
             </div>
         </div>
     </div>
+    <div class="men">
     <div class="management d-flex align-items-center flex-column">
         <h5>how it works in practice</h5>
         <h1 class="d-flex">
@@ -83,16 +84,48 @@
         <div class="point-bar">
             <div class="bar">
                 <div class="content d-flex justify-content-around">
-                <div v-for="(card, index) in pointCards" :key="`point-${index}`" class="cards">
-                    <div class="d-flex justify-content-center">
-                        <h5>{{ card.number }}</h5>
+                    <div v-for="(card, index) in pointCards" :key="`point-${index}`" class="cards">
+                        <div class="d-flex justify-content-center">
+                            <h5>{{ card.number }}</h5>
+                        </div>
+                        <h4>{{ card.title }}</h4>
+                        <span class="card-txt">{{ card.text }}</span>
                     </div>
-                    <h4>{{ card.title }}</h4>
-                    <span>{{ card.text }}</span>
                 </div>
             </div>
+        </div>
+    </div>
+    </div>
+    <div class="feedback">
+        <div class="container">
+            <h5>customer testimonials</h5>
+            <h1 class="d-flex justify-content-center">
+                Trusted
+                <div class="h1-bg">
+                    Feedback
+                </div>
+            </h1>
+            <span>We work intensively in search of ideals that can add up in the lives of our customers. This is what moves us and we are grateful for the recognition.</span>
+            <div class="feed-card d-flex">
+                <div class="card">
+                    <img src="../assets/logo-1.png" alt="">
+                    <span class="txt" c>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</span>
+                    <span class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="card">
+                    <img src="../assets/logo-2.png" alt="">
+                    <span class="txt">Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</span>
+                    <span class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="card">
+                    <img src="../assets/logo-3.png" alt="">
+                    <span class="txt">Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</span>
+                    <span class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    <i class="fas fa-quote-right"></i>
+                </div>
             </div>
-            
         </div>
     </div>
   </main>
@@ -218,6 +251,13 @@ export default {
                     number: '05',
                     title: 'Continuity formalization',
                     text: 'Lorem ipsum dolor sit amet consectetur'
+                }
+            ],
+            feedbackCards:[
+                {
+                    image: '1',
+                    text1: 'Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.',
+                    text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
                 }
             ]
         }
@@ -414,12 +454,13 @@ export default {
     }
 }
 .management{
+    margin-bottom: 250px;
     h5{
         color: #038483;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 600;
-        margin-top: 30px;
+        margin-top: 70px;
         margin-bottom: 30px;
     }
     h1{
@@ -453,7 +494,7 @@ export default {
         }
         .content{
             position: absolute;
-            top: -45px;
+            top: -85px;
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
@@ -481,6 +522,66 @@ export default {
                     font-weight: 600;
                 }
             }
+        }
+    }
+}
+.feedback{
+    background: #e4eae6;
+    padding: 70px 0;
+    text-align: center;
+
+    h5{
+        color: #038483;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+    h1{
+        color: black;
+        font-weight: 800;
+        font-size: 50px;
+        margin-bottom: 30px;
+        
+        .h1-bg{
+            color: #038483;
+            background: #03848441;
+            width: 250px;
+            margin-left: 10px;
+            text-align: center;
+        }
+    }
+    span{
+        
+        font-size: 16px;
+        color: #85878b;
+        width: 700px;
+    }
+    .card{
+        width: calc(100% / 3);
+        background: white;
+        margin: 40px 20px;
+        padding: 60px 40px;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+        
+        img{
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .txt{
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: start;   
+        }
+        i{
+            position: absolute;
+            bottom: 70px;
+            right: 20px;
+            font-size: 40px;
+            color: #85878b;
         }
     }
 }
