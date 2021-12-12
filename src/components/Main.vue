@@ -43,7 +43,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="projercts-card">
+            <div class="projects-card">
                 <div class="card">
                     <img src="../assets/project-1.jpg" alt="">
                     <h5>Academic professional program in social media</h5>
@@ -417,7 +417,7 @@ export default {
                 }
             }
         }
-        .projercts-card{
+        .projects-card{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -553,7 +553,6 @@ export default {
         }
     }
     span{
-        
         font-size: 16px;
         color: #85878b;
         width: 700px;
@@ -562,14 +561,18 @@ export default {
         width: calc(100% / 3);
         background: white;
         margin: 40px 20px;
-        padding: 60px 40px;
+        padding: 40px 40px;
         border: none;
         border-radius: 10px;
         position: relative;
         
         img{
-            width: 150px;
+            height: 30px;
+            object-fit: contain;
+            object-position: left;
             margin-bottom: 20px;
+            display: flex;
+            
         }
         .txt{
             width: 100%;
@@ -578,7 +581,7 @@ export default {
         }
         i{
             position: absolute;
-            bottom: 70px;
+            bottom: 45px;
             right: 20px;
             font-size: 40px;
             color: #85878b;
