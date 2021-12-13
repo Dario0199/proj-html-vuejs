@@ -49,6 +49,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/style/variables';
+
 footer{
     background: black;
 
@@ -58,7 +60,7 @@ footer{
             width: 60%;
             padding-right: 15px;
             h5{
-                color: #1a948f;
+                color: $primaryGreen;
                 text-transform: uppercase;
                 font-size: 14px;
                 font-weight: 600;
@@ -72,14 +74,14 @@ footer{
                 text-align: center;
                 
                 .h1-bg{
-                    background: #03848459;
+                    background: $secondaryBg_Green;
                     width: 180px;
                     margin-left: 10px;
                 }
             }
             span{
             font-size: 16px;
-            color: #85878b;
+            color: $primaryGrey;
             }
             .data-entry{
                 justify-content: space-between;
@@ -92,7 +94,7 @@ footer{
                     background: #2c2c2c;
                     border: none;
                     border-radius: 3px;
-                    color: #85878b;
+                    color: $primaryGrey;
                 }
                 select{
                     width: 49%;
@@ -100,7 +102,7 @@ footer{
                     background: #2c2c2c;
                     border: none;
                     border-radius: 3px;
-                    color: #85878b;
+                    color: $primaryGrey;
                 }
                 .text-msg{
                     width: 100%;
@@ -108,12 +110,16 @@ footer{
                 }
                 button{
                     border: none;
-                    background: #1a948f;
+                    background: $primaryGreen;
                     border-radius: 3px;
                     width: 80px;
                     height: 35px;
                     color: white;
                     text-transform: uppercase;
+                    &:active{
+                        background: white;
+                        color: $primaryGreen;
+                    }
                 }
             }
             
@@ -131,15 +137,15 @@ footer{
                 margin-bottom: 25px;
             }
             .txt{
-                color: #85878b;   
+                color: $primaryGrey;   
             }
             .info{
                 padding-top: 20px;
-                color: #1a948f;
+                color: $primaryGreen;
                 align-items: center;
                 i{
-                    background: #03848459;
-                    color: #1a948f;
+                    background: $secondaryBg_Green;
+                    color: $primaryGreen;
                     border-radius: 50%;
                     width: 35px;
                     height: 35px;
@@ -149,7 +155,7 @@ footer{
                 }
             }
             button{
-                border: 2px solid #1a948f;
+                border: 2px solid $primaryGreen;
                 background:none;
                 border-radius: 3px;
                 width: 120px;
@@ -157,6 +163,9 @@ footer{
                 color: white;
                 text-transform: uppercase;
                 margin-top: 20px;
+                &:active{
+                    background: $primaryGreen;
+                }
             }
         }
     }

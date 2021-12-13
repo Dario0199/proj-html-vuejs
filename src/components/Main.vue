@@ -266,6 +266,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/style/variables';
 .card-info{
     background: #e4eae6;
     padding: 70px 0;
@@ -282,8 +283,8 @@ export default {
             font-weight: 700;
         }
         i{
-            color: #038483;
-            background: #03848441;
+            color: $secondaryGreen;
+            background: $Bg_Green;
             font-size: 30px;
             width: 60px;
             height: 60px;
@@ -304,7 +305,7 @@ export default {
         padding-top: 80px;
 
         h5{
-            color: #1a948f;
+            color: $primaryGreen;
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 600;
@@ -318,22 +319,22 @@ export default {
 
             .h1-bg{
                 padding-left: 10px;
-                color: #038483;
-                background: #03848441;
+                color: $secondaryGreen;
+                background: $Bg_Green;
                 width: 110px;
                 margin-right: 10px;
             }
         }
         span{
             font-size: 16px;
-            color: #85878b;
+            color: $primaryGrey;
             margin-bottom: 30px;
         }
         .card-company{
             width: calc(100% / 3);
 
             h2{
-                color: #038483;
+                color: $secondaryGreen;
                 margin-left: 15px;
                 font-weight: 600;
             }
@@ -349,25 +350,25 @@ export default {
         }
             .b-left{
                 border: none;
-                background: #1a948f;
+                background: $primaryGreen;
                 border-radius: 3px;
                 width: 130px;
                 height: 35px;
                 &:active{
                     background: white;
-                    color: #1a948f;
-                    border: 2px solid #1a948f;
+                    color: $primaryGreen;
+                    border: 2px solid $primaryGreen;
                 }
             }
             .b-right{
                 width: 130px;
                 height: 35px;
                 background: none;
-                color: #1a948f;
+                color: $primaryGreen;
                 border-radius: 3px;
-                border: 2px solid #1a948f;
+                border: 2px solid $primaryGreen;
                 &:active{
-                    background: #1a948f;
+                    background: $primaryGreen;
                     color: white;
                 }
             }
@@ -384,7 +385,7 @@ export default {
     .container{
         padding-top: 80px;
         h5{
-            color: #1a948f;
+            color: $primaryGreen;
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 600;
@@ -398,7 +399,7 @@ export default {
             
             .h1-bg{
                 padding-left: 10px;
-                background: #03848459;
+                background: $secondaryBg_Green;
                 width: 220px;
                 height: 70px;
                 margin-left: 10px;
@@ -420,7 +421,7 @@ export default {
                         font-size: 14px;
                         font-weight: 600;
                         &:hover{
-                            background: #03848459;
+                            background: $secondaryBg_Green;
                             height: 25px;
                         }
                     }
@@ -467,7 +468,7 @@ export default {
 .management{
     margin-bottom: 250px;
     h5{
-        color: #038483;
+        color: $secondaryGreen;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 600;
@@ -481,9 +482,9 @@ export default {
         margin-bottom: 30px;
         
         .h1-bg{
-            color: #038483;
+            color: $secondaryGreen;
             padding-left: 15px;
-            background: #03848441;
+            background: $Bg_Green;
             width: 220px;
             margin-right: 10px;
         }
@@ -500,7 +501,7 @@ export default {
         .bar{
             width: 100%;
             height: 4px;
-            background-color: #03848441;
+            background-color: $Bg_Green;
             position: relative;
         }
         .content{
@@ -518,7 +519,7 @@ export default {
                     justify-content: center;
                     align-items: center;
                     background: #bee0e0;
-                    color: #038483;
+                    color: $secondaryGreen;
                     font-weight: 700;
                     border-radius: 50%;
                     width: 35px;
@@ -542,7 +543,7 @@ export default {
     text-align: center;
 
     h5{
-        color: #038483;
+        color: $secondaryGreen;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 600;
@@ -556,8 +557,8 @@ export default {
         margin-bottom: 30px;
         
         .h1-bg{
-            color: #038483;
-            background: #03848441;
+            color: $secondaryGreen;
+            background: $Bg_Green;
             width: 250px;
             margin-left: 10px;
             text-align: center;
@@ -565,7 +566,7 @@ export default {
     }
     span{
         font-size: 16px;
-        color: #85878b;
+        color: $primaryGrey;
         width: 700px;
     }
     .card{
@@ -595,7 +596,7 @@ export default {
             bottom: 45px;
             right: 20px;
             font-size: 40px;
-            color: #85878b;
+            color: $primaryGrey;
         }
     }
 }

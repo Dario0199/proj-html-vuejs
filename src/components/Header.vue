@@ -112,8 +112,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/style/variables';
+
     .top-bar{
-        background: #24343c;
+        background: $primaryBlue;
         .container{
                 align-items: center;
         }
@@ -170,19 +172,6 @@ export default {
                         align-items: center;
                         list-style: none;
                         margin-top: 20px;
-                        
-                            // a{
-                            //     text-decoration: none;
-                            //     text-transform: uppercase;
-                            //     color: white;
-                            //     font-size: 14px;
-                            //     font-weight: 600;
-                            //     &.active,
-                            //     &:hover{
-                            //         color: #1a948f;
-                            //     }
-                            // }
-                        
                     }
                     a{
                         margin-top: 4px;
@@ -191,12 +180,12 @@ export default {
                         font-weight: 600;
                         margin-left: 20px;
                         &:hover{
-                            color: #1a948f;
+                            color: $primaryGreen;
                         }
                     }
                     button{
                         text-transform: uppercase;
-                        background: #1a948f;
+                        background: $primaryGreen;
                         color: white;
                         border: none;
                         border-radius: 3px;
@@ -205,7 +194,7 @@ export default {
                         margin-left: 20px;
                         &:active{
                             background: white;
-                            color: #1a948f;
+                            color: $primaryGreen;
                         }
                     }
                 }
@@ -217,7 +206,7 @@ export default {
                 .text{
 
                     h5{
-                        color: #1a948f;
+                        color: $primaryGreen;
                         text-transform: uppercase;
                         font-size: 14px;
                         font-weight: 600;
@@ -241,13 +230,13 @@ export default {
                     }
                     .b-left{
                         border: none;
-                        background: #1a948f;
+                        background: $primaryGreen;
                         border-radius: 3px;
                         width: 130px;
                         height: 35px;
                         &:active{
                             background: white;
-                            color: #1a948f;
+                            color: $primaryGreen;
                         }
                     }
                     .b-right{
@@ -255,11 +244,11 @@ export default {
                         height: 35px;
                         background: none;
                         border-radius: 3px;
-                        border: 2px solid #1a948f;
+                        border: 2px solid $primaryGreen;
                         &:active{
                             background: white;
-                            color: #1a948f;
-                            border: 2px solid #1a948f;
+                            color: $primaryGreen;
+                            border: 2px solid $primaryGreen;
 
                         }
                     }
