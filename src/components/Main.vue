@@ -353,6 +353,11 @@ export default {
                 border-radius: 3px;
                 width: 130px;
                 height: 35px;
+                &:active{
+                    background: white;
+                    color: #1a948f;
+                    border: 2px solid #1a948f;
+                }
             }
             .b-right{
                 width: 130px;
@@ -361,6 +366,10 @@ export default {
                 color: #1a948f;
                 border-radius: 3px;
                 border: 2px solid #1a948f;
+                &:active{
+                    background: #1a948f;
+                    color: white;
+                }
             }
     }
     img{
@@ -389,8 +398,9 @@ export default {
             
             .h1-bg{
                 padding-left: 10px;
-                background: #03848441;
+                background: #03848459;
                 width: 220px;
+                height: 70px;
                 margin-left: 10px;
             }
         }
@@ -410,7 +420,7 @@ export default {
                         font-size: 14px;
                         font-weight: 600;
                         &:hover{
-                            background: #03848441;
+                            background: #03848459;
                             height: 25px;
                         }
                     }
@@ -421,6 +431,7 @@ export default {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-bottom: 50px;
             .card{
                 width: 400px;
                 border: none;

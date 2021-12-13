@@ -33,19 +33,22 @@
             <div class="container">
                 <div class="nav-bar">
                     <img src="https://nexgen.codings.dev/wp-content/uploads/2021/03/logo.svg" alt="">
-                    <ul class="link">
-                        <li v-for="(link, index) in navLinks" :key="`link-${index}`">
-                            <a :class="{ active: link.current }" :href="link.url">{{ link.text }}</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="far fa-user"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <button>get in touch</button>
-                        </li>
-                    </ul>
+                    <div class="menu d-flex align-items-center">
+                        <ul class="link">
+                            <li v-for="(link, index) in navLinks" :key="`link-${index}`">
+                                <!-- <a :class="{ active: link.current }" :href="link.url">{{ link.text }}</a> -->
+                                <Menu 
+                                :option="link.text"
+                                :thumb="link.url"
+                                :value="link.current"
+                                />
+                            </li>
+                        </ul>
+                        <a class="d-flex align-items-center" href="#">
+                            <i class="far fa-user"></i>
+                        </a>
+                        <button>get in touch</button>
+                    </div>
                 </div>
                 <div class="content">
                     <div class="text">
@@ -67,8 +70,13 @@
 </template>
 
 <script>
+import Menu from '@/components/Menu.vue';
+
 export default {
-    name: 'Header0',
+    name: 'Header',
+    components:{
+        Menu,
+    },
     data(){
         return{
             navLinks:[
@@ -156,34 +164,50 @@ export default {
                     width: 120px;
                     margin-top: 15px;
                 }
-                ul{
-                    display: flex;
-                    align-items: center;
-                    list-style: none;
-                    margin-top: 20px;
-                    li{
+                .menu{
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        list-style: none;
+                        margin-top: 20px;
+                        
+                            // a{
+                            //     text-decoration: none;
+                            //     text-transform: uppercase;
+                            //     color: white;
+                            //     font-size: 14px;
+                            //     font-weight: 600;
+                            //     &.active,
+                            //     &:hover{
+                            //         color: #1a948f;
+                            //     }
+                            // }
+                        
+                    }
+                    a{
+                        margin-top: 4px;
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 600;
                         margin-left: 20px;
-                        a{
-                            text-decoration: none;
-                            text-transform: uppercase;
-                            color: white;
-                            font-size: 14px;
-                            font-weight: 600;
-                            &.active,
-                            &:hover{
-                                color: #1a948f;
-                            }
+                        &:hover{
+                            color: #1a948f;
                         }
-                        button{
-                            text-transform: uppercase;
-                            background: #1a948f;
-                            color: white;
-                            border: none;
-                            border-radius: 3px;
-                            width: 130px;
-                            height: 35px;
+                    }
+                    button{
+                        text-transform: uppercase;
+                        background: #1a948f;
+                        color: white;
+                        border: none;
+                        border-radius: 3px;
+                        width: 130px;
+                        height: 35px;
+                        margin-left: 20px;
+                        &:active{
+                            background: white;
+                            color: #1a948f;
                         }
-                    }    
+                    }
                 }
             }
             .content{
@@ -221,6 +245,10 @@ export default {
                         border-radius: 3px;
                         width: 130px;
                         height: 35px;
+                        &:active{
+                            background: white;
+                            color: #1a948f;
+                        }
                     }
                     .b-right{
                         width: 130px;
@@ -228,6 +256,12 @@ export default {
                         background: none;
                         border-radius: 3px;
                         border: 2px solid #1a948f;
+                        &:active{
+                            background: white;
+                            color: #1a948f;
+                            border: 2px solid #1a948f;
+
+                        }
                     }
                 }
 
